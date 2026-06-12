@@ -36,11 +36,11 @@ try {
 // VERIFICAÇÃO DE SEGURANÇA DE ROTA
 // ==========================================
 const paginaAtual = window.location.pathname.split('/').pop();
-const isLoginPage = paginaAtual === 'login.html' || paginaAtual === '' || window.location.pathname.endsWith('/');
+const isLoginPage = paginaAtual === 'index.html' || paginaAtual === '' || window.location.pathname.endsWith('/');
 
 if (!currentUser && !isLoginPage) {
-    console.warn("🔒 Usuário não identificado. Redirecionando para login.html...");
-    window.location.href = 'login.html';
+    console.warn("🔒 Usuário não identificado. Redirecionando para index.html...");
+    window.location.href = 'index.html';
 } else if (currentUser && isLoginPage) {
     window.location.href = 'dashboard.html';
 }
@@ -226,7 +226,7 @@ if (dashboardLogoutBtn) {
         localStorage.removeItem('currentUser');
         localStorage.removeItem('currentUserData');
         localStorage.removeItem('usuarioLogado');
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
     });
 }
 

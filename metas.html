@@ -661,12 +661,12 @@
     notificationBtn?.addEventListener('click', (e) => { e.stopPropagation(); notificationDropdown.classList.toggle('show'); profileDropdown?.classList.remove('show'); });
     profileBtn?.addEventListener('click', (e) => { e.stopPropagation(); profileDropdown.classList.toggle('show'); notificationDropdown?.classList.remove('show'); });
     document.addEventListener('click', () => { notificationDropdown?.classList.remove('show'); profileDropdown?.classList.remove('show'); });
-    document.getElementById('dropdown-logout')?.addEventListener('click', () => { localStorage.clear(); window.location.href = 'login.html'; });
+    document.getElementById('dropdown-logout')?.addEventListener('click', () => { localStorage.clear(); window.location.href = 'index.html'; });
     document.getElementById('ver-conquistas-btn')?.addEventListener('click', () => { alert('🏆 Conquistas: Leitor Iniciante, Sequência de 7 dias, Leitor Destaque!'); });
   }
 
   carregarUsuarioLogado();
-  if (!usuarioLogado) window.location.href = 'login.html';
+  if (!usuarioLogado) window.location.href = 'index.html';
   carregarMetas();
   setupDropdowns();
 </script>

@@ -706,7 +706,7 @@
     profileBtn?.addEventListener('click', (e) => { e.stopPropagation(); profileDropdown.classList.toggle('show'); notificationDropdown?.classList.remove('show'); });
     document.addEventListener('click', () => { notificationDropdown?.classList.remove('show'); profileDropdown?.classList.remove('show'); });
     
-    document.getElementById('dropdown-logout')?.addEventListener('click', () => { localStorage.clear(); window.location.href = 'login.html'; });
+    document.getElementById('dropdown-logout')?.addEventListener('click', () => { localStorage.clear(); window.location.href = 'index.html'; });
     document.getElementById('ver-conquistas-btn')?.addEventListener('click', () => { alert('🏆 Suas conquistas no Desafio 1 Milhão de Minutos!\n\n📚 Continue lendo para ajudar a escola!\n🔥 Mantenha sua sequência!\n⭐ Cada minuto conta!'); });
     document.getElementById('verConquistasBtn')?.addEventListener('click', () => { alert('🏆 Conquistas do Desafio:\n\n🎯 Contribuidor\n📖 Leitor Ávido\n⭐ Meta Parcial\n🏅 Herói da Leitura\n\nContinue assim!'); });
   }
@@ -718,7 +718,7 @@
     carregarUsuarioLogado();
     
     if (!usuarioLogado) {
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
       return;
     }
     
